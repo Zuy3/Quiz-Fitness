@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Compatibility guard for browser extensions that assign window.fetch
+      try {
+        if (typeof window !== 'undefined' && window.fetch) {
+          let _fetch = window.fetch.bind(window);
+          Object.defineProperty(window, 'fetch', {
+            get: function () {
+              return _fetch;
+            },
+            set: function (newFetch) {
+              _fetch = newFetch;
+            },
+            configurable: true,
+            enumerable: true,
+          });
+        }
+      } catch (err) {
+        // Ignore if already non-configurable
+      }
+
+      // Suppress uncaught errors from browser extensions
+      window.addEventListener(
+        'error',
+        function (event) {
+          if (
+            event.filename &&
+            (event.filename.includes('chrome-extension://') ||
+              event.filename.includes('moz-extension://'))
+          ) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            return true;
+          }
+        },
+        true
+      );
+    </script>
+    <title>Quiz @zuy_silva! emagrecer | Barriga Chapada em 7 Dias</title>
+    <meta name="description" content="Descubra o que está provocando a sensação de inchaço e peso no seu abdômen e conheça o plano de hábitos saudáveis Barriga Chapada em 7 Dias." />
+    <meta property="og:title" content="Quiz @zuy_silva! emagrecer | Barriga Chapada em 7 Dias" />
+    <meta property="og:description" content="Descubra o que está provocando a sensação de inchaço e peso no seu abdômen e conheça o plano de hábitos saudáveis Barriga Chapada em 7 Dias." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-forest: #1A3E31;
+    --brand-emerald: #15803D;
+    --brand-soft-green: #E8F3EE;
+    --brand-warm-bg: #FAF9F6;
+    --brand-charcoal: #1F2937;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1F2937;
+    background-color: #FAF9F6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-heading {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Subtle editorial paper dot pattern from V Shred reference */
+.bg-dot-pattern {
+  background-color: #FAF9F6;
+  background-image: radial-gradient(rgba(26, 62, 49, 0.08) 1.2px, transparent 1.2px);
+  background-size: 20px 20px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}

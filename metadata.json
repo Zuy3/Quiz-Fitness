@@ -1,0 +1,6 @@
+{
+  "name": "Quiz @zuy_silva! emagrecer",
+  "description": "Quiz interativo de hábitos, bem-estar e desinchaço feminino para o produto digital Barriga Chapada em 7 Dias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
